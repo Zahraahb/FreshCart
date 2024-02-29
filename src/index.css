@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+:root {
+    --main-color: #0aad0a;
+    --light-color: #f0f3f2;
+    --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+    --rating-color: #ffc908;
+}
+
+body {
+    font-family: var(--font-family) !important;
+    overflow-x: hidden;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+.product:hover {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+
+.product .btn {
+    transition: transform 1s, opacity 1s, color 0.5s, background-color 0.5s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.product:hover .btn {
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+
+.font-sm {
+    font-size: 14px;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+
+nav {
+    right: 0;
+    left: 0;
+
+
+    z-index: 99;
+}
+
+.parent {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+}
+
+.green-btn {
+    background-color: var(--main-color);
+}
+
+.btn.green-btn:hover {
+    background-color: var(--main-color) !important;
+}
+
+.btn:disabled {
+    background-color: var(--main-color) !important;
+
+}
+
+.create-acc {
+
+    color: var(--main-color);
+    transition: color 0.5s;
+}
+
+.create-acc:hover {
+    color: #118011;
+}
+
+.forget {
+    transition: color 0.5s;
+}
+
+.forget:hover {
+    color: #118011;
+
+}
+
+.cart {
+    position: relative;
+}
+
+.itemsNum {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: -20px;
+    right: -22px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.itemsNum p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+}
+
+aside {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    right: -100%;
+
+    overflow-y: auto;
+    transition: right 2s;
+}
+
+.isOpen {
+    right: 0;
+    transition: right 0.8s;
+
+}
+
+.modal {
+    top: 30%;
+    text-align: center;
+    z-index: 99999999999;
+
+
+
+
+
+}
+
+.modal-body {
+    background-color: var(--light-color);
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--main-color);
+}
+
+.loading {
+    position: fixed;
+    inset: 0;
+    top: -50px;
+    background-color: rgba(240, 243, 242, 0.7);
+}
+
+.btn-brdr {
+    border: 1px solid var(--main-color);
+
+}
+
+.btn-brdr:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.text-thin {
+    font-weight: 100;
+    font-size: 13px;
+    color: rgb(106, 101, 101);
+}
+
+.font-small {
+    font-size: 14px;
+
+}
+
+.cart-btn {
+    border-radius: 5px;
+}
+
+img {
+    object-fit: cover;
+}
+
+.checkout {
+    margin-left: 60px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.3;
+}
+
+.modal-cart .modal-body {
+    border-radius: 0;
+}
+
+.modal-sm {
+    --bs-modal-width: 600px;
+}
